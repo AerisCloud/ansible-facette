@@ -30,6 +30,8 @@
     make install
 
   when: facette_update|changed
+  notify:
+    - Restart Facette
   tags:
     - facette
 
@@ -55,6 +57,8 @@
     mode=0644
     owner=facette
     group=facette
+  notify:
+    - Restart Facette
   tags:
     - facette
     - files
@@ -66,6 +70,8 @@
     mode=0644
     owner=facette
     group=facette
+  notify:
+    - Restart Facette
   tags:
     - facette
     - files
@@ -77,6 +83,8 @@
     owner=root
     group=root
     mode=0700
+  notify:
+    - Restart Facette
   tags:
     - facette
     - files

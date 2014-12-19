@@ -1,2 +1,6 @@
----
-# handlers file for facette
+- name: "Restart Facette"
+  service: >
+    name=facette
+    state=restarted
+  tags:
+    - facette
