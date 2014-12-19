@@ -1,0 +1,43 @@
+- name: "Ensure Wizcorp, RPMForge, EPEL and EPEL-TESTING repos are present"
+  copy: >
+    src={{ item }}
+    dest=/etc/yum.repos.d
+    owner=root
+    group=root
+    mode=0644
+  with_items:
+    - rpmforge.repo
+  tags:
+    - facette
+    - rpmforge
+    - repos
+    - files
+
+- name: "Ensure DAG and EPEL GPG key is present"
+  copy: >
+    src={{ item }}
+    dest=/etc/pki/rpm-gpg/
+    owner=root
+    group=root
+    mode=0644
+  with_items:
+    - RPM-GPG-KEY-rpmforge-dag
+  tags:
+    - facette
+    - rpmforge
+    - repos
+    - files
+
+- name: "Install facette dependencies"
+  yum: >
+    name={{ item }}
+    enablerepo=rpmforge-extras
+    state=latest
+  with_items:
+    - golang
+    - rrdtool-devel
+    - pandoc
+    - pkgconfig
+  tags:
+    - facette
+    - pkgs

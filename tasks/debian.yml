@@ -1,0 +1,3 @@
+- fail: "Facette is not supported on Debian"
+  tags:
+    - facette
