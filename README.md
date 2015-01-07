@@ -17,11 +17,6 @@ collector-somedc-prod
 collector1  ansible_ssh_host=172.16.0.120
 
 [collector-somedc-prod:vars]
-
-# Set this variable to true to install Facette.
-# False by default.
-use_facette = true
-
 # The port Facette should listen on.
 facette_port = 12003
 ```

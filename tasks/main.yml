@@ -24,9 +24,10 @@
     executable=/bin/bash
     chdir=/opt/facette
 
-    source /opt/nvm/nvm.sh
+    source /etc/profile
     nvm use {{ node_version }}
     make
+    [ -f /etc/init.d/facette ] && service facette stop
     make install
 
   when: facette_update|changed
