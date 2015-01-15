@@ -1,5 +1,5 @@
 - name: "Install facette dependencies"
-  yum: >
+  yum2: >
     name={{ item }}
     state=latest
   with_items: facette_dependencies

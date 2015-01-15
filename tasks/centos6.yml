@@ -29,7 +29,7 @@
     - files
 
 - name: "Install facette dependencies"
-  yum: >
+  yum2: >
     name={{ item }}
     enablerepo=rpmforge-extras
     state=latest
