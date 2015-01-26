@@ -1,37 +1,7 @@
-- name: "Ensure RPMForge repo is present"
-  copy: >
-    src={{ item }}
-    dest=/etc/yum.repos.d
-    owner=root
-    group=root
-    mode=0644
-  with_items:
-    - rpmforge.repo
-  tags:
-    - facette
-    - rpmforge
-    - repos
-    - files
-
-- name: "Ensure DAG and EPEL GPG key is present"
-  copy: >
-    src={{ item }}
-    dest=/etc/pki/rpm-gpg/
-    owner=root
-    group=root
-    mode=0644
-  with_items:
-    - RPM-GPG-KEY-rpmforge-dag
-  tags:
-    - facette
-    - rpmforge
-    - repos
-    - files
-
 - name: "Install facette dependencies"
   yum2: >
     name={{ item }}
-    enablerepo=rpmforge-extras
+    enablerepo=epel
     state=latest
   with_items: facette_dependencies
   tags:

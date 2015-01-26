@@ -1,0 +1,6 @@
+dependencies:
+  - nodejs
+  - role: repo
+    repositories:
+      centos6:
+        - rpmforge
