@@ -1,7 +1,7 @@
 - name: "Install facette dependencies"
   yum2: >
     name={{ item }}
-    enablerepo=epel
+    enablerepo=epel,wizcorp
     state=latest
   with_items: facette_dependencies
   tags:
