@@ -4,3 +4,6 @@ dependencies:
     repositories:
       centos6:
         - rpmforge
+        - epel
+      centos7:
+        - epel

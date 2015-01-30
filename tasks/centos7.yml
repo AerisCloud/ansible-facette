@@ -2,6 +2,7 @@
   yum2: >
     name={{ item }}
     state=latest
+    enablerepo=epel
   with_items: facette_dependencies
   tags:
     - facette
