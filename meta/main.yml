@@ -16,7 +16,7 @@ galaxy_info:
     - monitoring
 dependencies:
   - nodejs
-  - role: repos
+  - role: aeriscloud-repos
     repositories:
       centos6:
         - rpmforge
