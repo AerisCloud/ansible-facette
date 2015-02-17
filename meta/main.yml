@@ -2,7 +2,7 @@ galaxy_info:
   author: Emilien Kenler <ekenler@wizcorp.jp>
   description: Installs Facette
   company: Wizcorp K.K.
-  license: BSD
+  license: MIT
   min_ansible_version: 1.8.1
   platforms:
     - name: EL
