@@ -119,27 +119,13 @@
     - facette
     - firewall
 
-- name: "Ensure the aeriscloud.d directory exists"
-  file: >
-    path=/etc/aeriscloud.d
-    state=directory
-    mode=0755
-    owner=root
-    group=root
+- name: "Add AerisCloud service definition"
+  aeriscloud_service:
+    name: facette
+    services:
+      - name: Facette Web Interface
+        port: "{{ facette_port }}"
+        path: /
   tags:
     - facette
-    - files
-    - announce
-
-- name: "Add /etc/aeriscloud.d service definition"
-  template: >
-    src=aeriscloud-facette.j2
-    dest=/etc/aeriscloud.d/facette
-    mode=0644
-    backup=no
-    owner=root
-    group=root
-  tags:
-    - facette
-    - files
     - announce
