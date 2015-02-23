@@ -99,26 +99,6 @@
   tags:
     - facette
 
-- name: "Add the facette firewall rules file"
-  template: >
-    src=iptables-facette.j2
-    dest=/etc/iptables.d/facette
-    mode=0600
-    backup=no
-    owner=root
-    group=root
-  tags:
-    - facette
-    - firewall
-    - files
-
-- name: "Apply the facette firewall rules right now"
-  shell: |
-    /sbin/iptables-restore -v --noflush < /etc/iptables.d/facette
-  tags:
-    - facette
-    - firewall
-
 - name: "Add AerisCloud service definition"
   aeriscloud_service:
     name: facette

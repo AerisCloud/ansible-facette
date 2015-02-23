@@ -23,3 +23,7 @@ dependencies:
         - epel
       centos7:
         - epel
+  - role: firewall
+    service_name: facette
+    tags:
+      - facette
