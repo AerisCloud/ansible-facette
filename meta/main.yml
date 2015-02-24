@@ -27,3 +27,4 @@ dependencies:
     service_name: facette
     tags:
       - facette
+  - role: aeriscloud-yum

@@ -1,5 +1,5 @@
 - name: "Install facette dependencies"
-  yum2: >
+  yum: >
     name={{ item }}
     enablerepo=epel,rpmforge-extras
     state=latest
