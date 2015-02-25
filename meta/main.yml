@@ -15,7 +15,9 @@ galaxy_info:
   categories:
     - monitoring
 dependencies:
-  - nodejs
+  - role: nodejs
+    tags:
+      - facette
   - role: aeriscloud.repos
     repositories:
       centos6:
