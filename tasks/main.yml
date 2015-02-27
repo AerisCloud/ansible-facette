@@ -25,7 +25,6 @@
     chdir=/opt/facette
 
     source /etc/profile
-    nvm use {{ node_version }}
     make
     [ -f /etc/init.d/facette ] && service facette stop
     make install
