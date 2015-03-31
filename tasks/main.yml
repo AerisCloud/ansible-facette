@@ -19,12 +19,21 @@
   tags:
     - facette
 
+- name: "Make sure the required node version is installed"
+  shell: |
+    creates={{ nvm_dir }}/{{ facette_node_version }}/bin
+    . {{ nvm_dir }}/nvm.sh && nvm install {{ facette_node_version }}
+  tags:
+    - facette
+    - nodejs
+
 - name: "Build facette"
   shell: |
     executable=/bin/bash
     chdir=/opt/facette
 
     source /etc/profile
+    nvm use {{ facette_node_version }}
     make
     [ -f /etc/init.d/facette ] && service facette stop
     make install

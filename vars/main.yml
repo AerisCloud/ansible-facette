@@ -1,5 +1,7 @@
 go_download_location: "http://golang.org/dl/{{ go_tarball }}"
 
+facette_node_version: "v0.10.38"
+
 facette_dependencies:
   - golang
   - rrdtool-devel
