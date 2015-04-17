@@ -21,8 +21,11 @@
 
 - name: "Make sure the required node version is installed"
   shell: |
+    executable=/bin/bash
     creates={{ nvm_dir }}/{{ facette_node_version }}/bin
-    . {{ nvm_dir }}/nvm.sh && nvm install {{ facette_node_version }}
+
+    source {{ nvm_dir }}/nvm.sh
+    nvm install {{ facette_node_version }}
   tags:
     - facette
     - nodejs
