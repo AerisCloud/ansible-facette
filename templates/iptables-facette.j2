@@ -1,0 +1,6 @@
+# Firewall rules for the 'facette' role
+*filter
+:facette_in - [0:0]
+-I INPUT -j facette_in
+-A facette_in -p tcp -m tcp --dport {{ facette_port }} -j ACCEPT -i {{ private_interface }} -s {{ private_network }}/{{ private_netmask }}
+COMMIT
