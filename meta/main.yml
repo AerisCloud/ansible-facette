@@ -24,7 +24,7 @@ dependencies:
       centos7:
         - epel
   - role: firewall
-    service_name: facette
+    role_name: facette
     tags:
       - facette
   - role: aeriscloud.yum
