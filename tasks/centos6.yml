@@ -3,7 +3,7 @@
     name={{ item }}
     enablerepo=epel,rpmforge-extras
     state=latest
-  with_items: facette_dependencies
+  with_items: facette_dependencies['centos']
   tags:
     - facette
     - pkgs
