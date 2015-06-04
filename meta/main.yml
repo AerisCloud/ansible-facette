@@ -15,7 +15,7 @@ galaxy_info:
   categories:
     - monitoring
 dependencies:
-  - role: nodejs
+  - role: aeriscloud.nodejs
     tags:
       - facette
   - role: joshualund.golang
