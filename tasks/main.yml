@@ -109,14 +109,3 @@
     runlevel=5
   tags:
     - facette
-
-- name: "Add AerisCloud service definition"
-  aeriscloud_service:
-    name: facette
-    services:
-      - name: Facette Web Interface
-        port: "{{ facette_port }}"
-        path: /
-  tags:
-    - facette
-    - announce
