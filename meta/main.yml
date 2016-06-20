@@ -15,7 +15,7 @@ galaxy_info:
   categories:
     - monitoring
 dependencies:
-  - role: aeriscloud.nodejs
+  - role: AerisCloud.nodejs
     tags:
       - facette
   - role: joshualund.golang
@@ -24,11 +24,11 @@ dependencies:
     go_tarball_checksum: "141b8345932641483c2437bdbd65488a269282ac85f91170805c273f03dd223b"
     tags:
       - facette
-  - role: aeriscloud.repos
+  - role: AerisCloud.repos
     repositories:
       centos6:
         - rpmforge
         - epel
       centos7:
         - epel
-  - role: aeriscloud.yum
+  - role: AerisCloud.yum
